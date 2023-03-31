@@ -1,0 +1,139 @@
+.navbar-toggler{
+    background-color: rgba(165, 42, 42, 0.564);
+}
+.navbar{
+    background-color: coral;
+    
+}
+.nav-link {
+    color: darkcyan;
+}
+.form-control{
+    background-color:rgba(184, 135, 11, 0.5);
+}
+.btn{
+    color:rgba(0, 0, 255, 0.851);
+    background-color: rgba(105, 105, 105, 0.548);
+}
+.dropdown-item{
+    color: darkgoldenrod;
+    background-color: rgba(0, 139, 139, 0.616);
+}
+
+
+
+
+
+
+
+
+
+
+:root {
+    --card-height: clamp(400px, 20vw, 300px)
+}
+
+
+
+main {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card:first-child {
+    background: url(../assetrs/ww1.webp);
+    background-size: 100%;
+    background-position: center;
+}
+.card:nth-child(2) {
+    background: url(../assetrs/123.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+.card:last-child {
+    background: url(../assetrs/5567.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+.card {
+    background-repeat: no-repeat;
+    margin: 10px;
+    height: var(--card-height);
+    aspect-ratio: 3/4;
+    transition: background 500ms ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: calc(var(--card-height)*.05);
+}
+.card:first-child:hover {
+    background-position: 0px 0px;
+    background-size: calc(var(--card-height)*1.5);
+}
+
+.card:nth-child(2):hover {
+    background-position: 0px 0px;
+    background-size: calc(var(--card-height)*1.5);
+}
+
+.card:last-child:hover {
+    background-position: 0px 0px;
+    background-size: calc(var(--card-height)*1.25);
+}
+
+.wrapper {
+    background-color: #00000000;
+    transition: 1200ms ease-in-out;
+    backdrop-filter: blur(0px);
+    height: 100%;
+    width: 120%;
+    position: relative;
+}
+.card:hover .wrapper {
+    background-color: #0000003c;
+    backdrop-filter: blur(5px);
+}
+img{
+    position: absolute;
+    perspective: 200px;
+    position: relative;
+    height: calc(var(--card-height)*.3);
+    transition: 500ms ease-in-out;
+    bottom: -100%;
+    left: -50%;
+    pointer-events: none;
+}
+.card:hover img {
+    bottom: -10%;
+    height: calc(var(--card-height)*1.2);
+    filter: drop-shadow(0px -20px 25px #83bdffd4) ;
+    pointer-events: none;
+}
+
+.links {
+    top: 5%;
+    right: -15%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transition: 500ms ease-in-out;
+}
+.links a {
+    text-decoration: none;
+}
+.links a i {
+    margin: 5px;
+    color: #ffffffb7;
+}
+.card:hover .links {
+    right: 20%;
+}
+.card:hover .links a i{
+    filter: drop-shadow(0px 0px 5px #83bdffd4) ;
+
+}
